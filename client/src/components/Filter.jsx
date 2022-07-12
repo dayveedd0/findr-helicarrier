@@ -27,7 +27,7 @@ function Filter() {
         )
       );
     }
-  }, [query, data]);
+  }, [loading, query]);
 
   return (
     <div className="flex mt-10 flex-col items-center">

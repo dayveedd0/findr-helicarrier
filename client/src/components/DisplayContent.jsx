@@ -1,24 +1,31 @@
 import React from "react";
-import { groupBy, toArray } from "../helpers";
-//const newData = toArray(groupBy("createdAt", data.getAllUsers));
-
-//console.log(newData, filteredData);
+import { groupBy } from "../helpers";
+import PersonCard from "./PersonCard";
 
 function DisplayContent({ data }) {
-  return data.map((user) => {
-    return (
-      <ul className="p-6 divide-y divide-slate-200">
-        <li className="flex py-4 first:pt-0 last:pb-0">
-          <div className="ml-3 overflow-hidden">
-            <p className="text-sm font-medium text-slate-900">
-              {user.fullName}
-            </p>
-            <p className="text-sm text-slate-500 truncate">{user.status}</p>
-          </div>
-        </li>
-      </ul>
-    );
-  });
-}
+  const content = groupBy(data);
+  console.log(content);
 
+  return (
+    <div className="w-auto justify center items-center md:w-auto md:justify-center md:items-center ">
+      {content.map(({ group, children }, i) => (
+        <div className="flex flex-col p-2">
+          <span className="text-sm text-zinc-500">{group}</span>
+          <div className="flex flex-col flex-grow sm:space-x-2 sm:flex-row">
+            {children.map(({ fullName, country, status, phoneNumber }) => (
+              <div>
+                <PersonCard
+                  name={fullName}
+                  status={status}
+                  number={phoneNumber}
+                  country={country}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 export default DisplayContent;

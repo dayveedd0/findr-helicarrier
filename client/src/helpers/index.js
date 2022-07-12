@@ -1,18 +1,18 @@
 // Create Reusable Grouping function using array.reduce this function returns
-// an object with each of the equivalent grouped data as keys.
-export const groupBy = (key, arr) =>
-  arr.reduce((cache, product) => {
-    const property = product[key];
-    if (property in cache) {
-      return { ...cache, [property]: cache[property].concat(product) };
-    }
-    return { ...cache, [property]: [product] };
+// an object with each of the equivalent grouped data as keys(group,children)
+export const groupBy = (value) => {
+  let data = value.reduce((acc, val) => {
+    // get date of current element
+    let group = val.createdAt;
+    // if the property does not exist in the accumulator we create it
+    if (!acc[group]) acc[group] = { group, children: [val] };
+    // if it does push the current element to children array
+    else acc[group].children.push(val);
+    // return accumulator
+    return acc;
   }, {});
 
-//Reusable object to array converting function which returns an array of the objects properties and keys
-//function returns the new array in a variable called content
-
-export const toArray = (obj) => {
-  const content = Object.entries(obj).map((entry) => entry[1]);
-  return content;
+  //To get an array of values
+  // we use Object.values method
+  return Object.values(data);
 };
