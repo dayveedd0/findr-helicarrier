@@ -1,4 +1,9 @@
 import React from "react";
+import { groupBy, toArray } from "../helpers";
+//const newData = toArray(groupBy("createdAt", data.getAllUsers));
+
+//console.log(newData, filteredData);
+
 function DisplayContent({ data }) {
   return data.map((user) => {
     return (

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import DisplayContent from "./DisplayContent";
 import { useQuery } from "@apollo/client";
 import { LOAD_USERS } from "../GraphQL/Queries";
-import { groupBy, toArray } from "../helpers";
 import AppButton from "./AppButton";
 
 function Filter() {
@@ -28,9 +27,6 @@ function Filter() {
         )
       );
     }
-    //const newData = toArray(groupBy("createdAt", data.getAllUsers));
-
-    //console.log(newData, filteredData);
   }, [query, data]);
 
   return (
