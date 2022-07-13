@@ -41,8 +41,11 @@ function Filter() {
             focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-sky-500"
         />
       </div>
+      <p className="text-center text-sm text-slate-400">
+        search by name, status or country or use the filters below
+      </p>
       {/* Filters */}
-      <div className="mt-5 w-[290px] p-3 space-y-2 justify-center items-center space-x-2 md:w-[490px]">
+      <div className="mt-2 w-[290px] p-3 space-y-2 justify-center items-center space-x-2 md:w-[490px]">
         <AppButton change={filtersBy} value={""} btnName={"All"} />
         <AppButton change={filtersBy} value={"active"} btnName={"Active"} />
         <AppButton

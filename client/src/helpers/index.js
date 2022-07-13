@@ -16,3 +16,10 @@ export const groupBy = (value) => {
   // we use Object.values method
   return Object.values(data);
 };
+
+//////////////////////////////////
+
+export const filtersBy = (arr, query) => {
+  let data = arr.filter((val) => val.toLowerCase().includes(query));
+  return data;
+};
