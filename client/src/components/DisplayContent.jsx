@@ -17,8 +17,9 @@ function DisplayContent({ data }) {
             </p>
           </span>
           <div className="flex flex-col flex-grow sm:space-x-2 sm:flex-row">
-            {children.map(({ fullName, country, status, phoneNumber }) => (
+            {children.map(({ id, fullName, country, status, phoneNumber }) => (
               <PersonCard
+                id={id}
                 name={fullName}
                 status={status}
                 number={phoneNumber}

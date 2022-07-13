@@ -5,7 +5,7 @@ function PersonCard({ id, name, status, country, number }) {
   return (
     <ul className="p-3 divide-y divide-slate-200">
       <li className="flex p-3 border rounded-md shadow-md border-white">
-        <div className="ml-3 overflow-hidden">
+        <div key={id} className="ml-3 overflow-hidden">
           <p className="text-sm font-medium text-slate-900">{name}</p>
           <p className="text-sm font-medium text-slate-500">{country}</p>
           <p className="text-sm font-medium text-slate-500">{number}</p>

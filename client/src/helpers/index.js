@@ -19,7 +19,7 @@ export const groupBy = (value) => {
 
 //////////////////////////////////
 
-export const filtersBy = (arr, query) => {
-  let data = arr.filter((val) => val.toLowerCase().includes(query));
-  return data;
-};
+// export const filtersBy = (arr, query) => {
+//   let data = arr.filter((val) => val.toLowerCase().includes(query));
+//   return data;
+// };
