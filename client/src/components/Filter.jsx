@@ -41,7 +41,7 @@ function Filter() {
             focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-sky-500"
         />
       </div>
-      <p className="text-center text-sm text-slate-400">
+      <p className="text-center text-xs text-slate-400">
         search by name, status or country or use the filters below
       </p>
       {/* Filters */}

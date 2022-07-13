@@ -21,7 +21,7 @@ function App() {
           </div>
         </div>
         <Filter />
-        <p className="text-sm text-slate-500 text-center mt-20">
+        <p className="text-xs text-slate-500 text-center mt-20">
           Made with ❤ by{" "}
           <a className="text-slate-600" href="https://kiforodavid.netlify.app">
             Kiforo
