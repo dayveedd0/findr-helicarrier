@@ -8,7 +8,7 @@ import { client } from "./GraphQL/Config";
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="w-screen h-full pb-10 bg-zinc-200 fixed drop-shadow-lg">
+      <div className="w-screen h-full  bg-zinc-200 fixed drop-shadow-lg">
         <div className="px-2 flex justify-center w-full h-[80px]">
           {/* Site Title */}
           <div className="flex flex-col mt-5">
@@ -21,7 +21,7 @@ function App() {
           </div>
         </div>
         <Filter />
-        <p className="text-sm text-slate-500 text-center mt-5">
+        <p className="text-sm text-slate-500 text-center mt-20">
           Made with ❤ by{" "}
           <a className="text-slate-600" href="https://kiforodavid.netlify.app">
             Kiforo
