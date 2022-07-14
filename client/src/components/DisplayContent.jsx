@@ -4,7 +4,6 @@ import PersonCard from "./PersonCard";
 
 function DisplayContent({ data }) {
   const content = groupBy(data);
-  console.log(content);
 
   return (
     <div className=" display w-auto p-3 border border-white rounded-md  justify center h-[300px] overflow-y-auto items-center md:w-auto md:justify-center md:items-center ">
